@@ -1,6 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: youtdili <youtdili@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/25 22:37:43 by youtdili          #+#    #+#             */
+/*   Updated: 2026/10/25 23:49:57 by youtdili         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
-static int	cnt(char const *s, char c , int x, int i)
+static int	cnt(char const *s, char c, int x, int i)
 {
 	while (s[i] != c && s[i])
 		i++;
@@ -14,7 +25,7 @@ static int	cnt(char const *s, char c , int x, int i)
 static char	**asmbl(char **strs, char const *s, char c, int i)
 {
 	static int	ltr;
-	int	l;
+	int			l;
 
 	if (!ltr)
 		ltr = 0;
@@ -34,7 +45,7 @@ static char	**asmbl(char **strs, char const *s, char c, int i)
 static int	fakestrlen(char c, char const *s)
 {
 	static int	j;
-	int	p;
+	int			p;
 
 	p = 0;
 	if (!j)
@@ -52,8 +63,8 @@ static int	fakestrlen(char c, char const *s)
 char	**ft_split(char const *s, char c)
 {
 	char	**strs;
-	int	i;
-	int	x;
+	int		i;
+	int		x;
 
 	if (s == NULL)
 		return (NULL);
@@ -71,11 +82,11 @@ char	**ft_split(char const *s, char c)
 	return (strs);
 }
 
-int	main(int ac, char **av)
+/*int	main(int ac, char **av)
 {
 	if (ac != 3)
 		return (1);
-	char **ss = ft_split(av[1] , av[2][0]);
+	char	**ss = ft_split(av[1] , av[2][0]);
 	int	u = 0;
 	while (ss[u])
 	{
@@ -83,5 +94,4 @@ int	main(int ac, char **av)
 		u++;
 	}
 	return (0);
-}
-
+}*/

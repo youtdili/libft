@@ -1,8 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: youtdili <youtdili@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/25 22:41:54 by youtdili          #+#    #+#             */
+/*   Updated: 2026/10/25 22:42:45 by youtdili         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 #include "libft.h"
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (!((unsigned char)c >= 'A' && (unsigned char)c <= 'Z'))
-		return(c);
-	return(c - 32);
+		return (c);
+	return (c - 32);
 }

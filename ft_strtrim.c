@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: youtdili <youtdili@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/10/25 22:32:36 by youtdili          #+#    #+#             */
+/*   Updated: 2026/10/26 00:07:41 by youtdili         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-int	douane(char const *trv, char const c)
+static int	douane(char const *trv, char const c)
 {
 	int	j;
 
@@ -14,10 +26,10 @@ int	douane(char const *trv, char const c)
 	return (0);
 }
 
-char	*create(char const *s1, int x, int i)
+static char	*create(char const *s1, int x, int i)
 {
-	int	y;
 	char	*cpy;
+	int		y;
 
 	y = 0;
 	cpy = malloc(sizeof(char) * (i - x + 1));
