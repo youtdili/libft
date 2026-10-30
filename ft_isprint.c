@@ -6,14 +6,14 @@
 /*   By: youtdili <youtdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:41:31 by youtdili          #+#    #+#             */
-/*   Updated: 2026/10/25 22:41:35 by youtdili         ###   ########.fr       */
+/*   Updated: 2026/10/26 21:40:44 by younessso        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 int	ft_isprint(int c)
 {
-	if ((unsigned char)c <= '\31' || (unsigned char)c >= '\127')
+	if (c <= 31 || c >= 127)
 		return (0);
 	return (1);
 }

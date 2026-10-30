@@ -6,14 +6,14 @@
 /*   By: youtdili <youtdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:41:54 by youtdili          #+#    #+#             */
-/*   Updated: 2026/10/25 22:42:45 by youtdili         ###   ########.fr       */
+/*   Updated: 2026/10/26 21:52:14 by younessso        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 int	ft_tolower(int c)
 {
-	if (!((unsigned char)c >= 'A' && (unsigned char)c <= 'Z'))
-		return (c);
-	return (c - 32);
+	if (c >= 'A' && c <= 'Z')
+		return (c + 32);
+	return (c);
 }

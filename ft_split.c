@@ -6,7 +6,7 @@
 /*   By: youtdili <youtdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:37:43 by youtdili          #+#    #+#             */
-/*   Updated: 2026/10/25 23:49:57 by youtdili         ###   ########.fr       */
+/*   Updated: 2026/10/30 04:18:56 by younessso        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -60,6 +60,12 @@ static int	fakestrlen(char c, char const *s)
 	return (p);
 }
 
+char	**free_all(char **ptr)
+{
+	free(ptr);
+	return (NULL);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**strs;
@@ -72,12 +78,18 @@ char	**ft_split(char const *s, char c)
 	x = 1;
 	x = cnt(s, c, x, i);
 	strs = malloc(sizeof(char *) * (x + 1));
+	if (!strs)
+		return (free_all(strs));
 	while (i < x)
 	{
 		strs[i] = malloc(sizeof(char) * fakestrlen(c, s));
 		asmbl(strs, s, c, i);
+		if (!strs[i])
+			return (free_all(strs));
 		i++;
 	}
+	if (strs == NULL || !strs)
+		return (NULL);
 	strs[x + 1] = NULL;
 	return (strs);
 }

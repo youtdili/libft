@@ -6,26 +6,22 @@
 /*   By: youtdili <youtdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:40:00 by youtdili          #+#    #+#             */
-/*   Updated: 2026/10/25 23:46:26 by youtdili         ###   ########.fr       */
+/*   Updated: 2026/10/27 16:04:24 by younessso        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	d;
-	unsigned char	*str;
-	size_t			i;
+	size_t				i;
+	const unsigned char	*str;
 
-	if (s == NULL || c < 0)
-		return (NULL);
-	str = (unsigned char *)s;
-	d = (unsigned char)c;
 	i = 0;
-	while (str[i] && i <= n)
+	str = s;
+	while (i < n)
 	{
-		if (str[i] == d)
-			return ((char *)&str[i]);
+		if ((unsigned char )str[i] == (unsigned char)c)
+			return ((void *)&str[i]);
 		i++;
 	}
 	return (NULL);

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                             :+:    :+:           */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: youtdili <youtdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/26 00:27:07 by youtdili          #+#    #+#             */
-/*   Updated: 2026/10/26 15:22:36 by youtdili       ########   odam.nl        */
+/*   Updated: 2026/10/29 18:34:35 by younessso        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #ifndef LIBFT_H
@@ -18,6 +18,7 @@
 # include <limits.h>
 # include <stddef.h>
 # include <unistd.h>
+# include <errno.h>
 
 typedef struct s_list
 {

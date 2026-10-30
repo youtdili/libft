@@ -6,14 +6,14 @@
 /*   By: youtdili <youtdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:45:21 by youtdili          #+#    #+#             */
-/*   Updated: 2026/10/25 22:45:27 by youtdili         ###   ########.fr       */
+/*   Updated: 2026/10/26 21:38:27 by younessso        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 int	ft_isascii(int c)
 {
-	if (c >= '\0' && (unsigned char)c <= '\127')
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }

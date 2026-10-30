@@ -6,13 +6,16 @@
 /*   By: youtdili <youtdili@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/10/25 22:54:19 by youtdili          #+#    #+#             */
-/*   Updated: 2026/10/25 22:54:22 by youtdili         ###   ########.fr       */
+/*   Updated: 2026/10/30 03:16:03 by younessso        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	del(lst);
-	free(lst);
+	if (lst && del)
+	{
+		del(lst);
+		free(lst);
+	}
 }
